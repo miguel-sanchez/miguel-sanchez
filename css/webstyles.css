@@ -1,0 +1,80 @@
+/*!
+ * Miguelsanchez.com v1.0
+ * July 4th, 2013
+ */
+
+/* GLOBAL */
+body{background:#000;padding:1em 0}
+
+/* HEADER */
+/* Logo */
+@font-face{font-family:'Dali';src:url('type/dali-webfont.eot');src:url('type/dali-webfont.eot?#iefix') format('embedded-opentype'),
+url('type/dali-webfont.ttf') format('truetype'),
+url('type/dali-webfont.svg#webfont') format('svg');}
+#logo{left:5px;top:35px}
+#logo a{text-decoration:none}
+#logo h2{color:#FFF;font-family:"Dali";font-size:2.5em;font-smooth:always;-webkit-font-smoothing:antialiased;font-weight:400}
+#logo p{color:#FFF;font-size:1em;margin-left:65px;margin-top:-15px;font-weight:400;font-smooth:always;-webkit-font-smoothing:antialiased}
+#logoextra{background:url(../img/logoextra.png) no-repeat;height:9px;left:160px;position:absolute;top:22px;width:7px}
+/* 
+#holidays {background:url(../img/halloween.png) no-repeat;height:22px;left:215px;position:absolute;top:-24px;width:33px;z-index:10}
+#holidays{background:url(../img/christmas.png) no-repeat;width:35px;height:35px;position:absolute;top:13px;left:11px;z-index:10} 
+*/
+/* Navigation */
+#nav{text-align:right}
+#nav button{margin-top:25px}
+#modal_email .modal-body{height:450px;overflow:auto}
+
+/* MAIN CONTENTS */
+.jumbotron{padding:1em}
+#main_carousel{min-height:250px}
+.carousel-indicators{top:-1.5em !important;left:-1em !important;margin:0 !important}
+.carousel-control{background-image:none !important}
+#carousel-control-left{left:0;top:-1em;width:20px;height:30px}
+#carousel-control-right{right:0;top:-1em;width:20px;height:30px}
+.main_img{text-align:center}
+.main_txt h1{font-size:2.2em !important;margin-top:0.1em !important;font-weight:600}
+.main_txt h3{font-size:1em;margin:0;font-weight:400;color:#B1934D !important}
+.main_txt p{margin:1em 0}
+.main_txt .btn-warning{margin-right:1em}
+/* Custom button */
+.btn-custom{background-color:#B1934D;border-color:#B1934D;color:#FFF}
+.btn-custom:hover,.btn-custom:focus,.btn-custom:active,.btn-custom.active{background-color:#96825b;border-color:#867451}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active{background-color:#a38f67;border-color:#a38f67}
+/* Social buttons */
+#social{position:absolute;top:2.2em;right:10em}
+/* Calendar */
+#calendar{border-top:2px solid #333;overflow:auto;margin-top:1em;background:#DDD;padding-bottom:0.5em}
+#calendar h3{float:left;font-size:1em;font-weight:400;padding:0;margin:8px 0 0 10px}
+#calendarshow{float:right;display:block;margin:5px 10px}
+#calendar ul{margin:0;padding:0;clear:both;border-top:1px solid #333}
+#calendar li{float:left;list-style:none;width:31%;margin:0 0 0 10px;line-height:0.7em !important}
+#calendar li a{color:#111;font-size:0.6em;text-decoration:underline}
+#calendar li div{float:left;width:50px;text-align:center;margin-right:0.5em;padding:13px 5px;background:#111;color:#DDD;font-size: 0.8em}
+#calendar li span{display:block}
+#modal_calendar iframe{border:0}
+#modal_calendar p{color:#333;margin:0;padding:0}
+#modal_calendar p a{color:#333;text-decoration:underline}
+#modal_calendar .modal-footer{margin-top:0}
+
+/* CLIENTS */
+#clients {overflow:auto} 
+#clients h3{margin:0}
+#clients ul{clear:both;border-top:1px solid #333;margin:0;padding:0}
+#clients li{float:left;margin:1em 0;width:25%;list-style:none;padding:0;text-align:center;font-size:0.7em;line-height:1em !important}
+#clients li img{width:80px}
+#clients li span{display:block}
+
+/* FOOTER */
+footer{color:#777;font-size:0.9em;text-align:center}
