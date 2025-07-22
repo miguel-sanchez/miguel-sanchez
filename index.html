@@ -6,26 +6,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <title>Miguel S&aacute;nchez: IT Trainer &amp; Speaker</title>
-  <meta name="description"
-    content="Personal website of Miguel S&aacute;nchez P&eacute;rez. IT trainer &amp; speaker. Building AI-based businesses.">
 
-  <meta property="og:site_name" content="MiguelSanchez.com">
-  <meta property="og:title" content="Miguel S&aacute;nchez: IT Trainer &amp; Speaker">
+  <title>Miguel Sánchez | Founder, Smart Work Master & AI Strategist</title>
+  <meta name="description"
+    content="Personal website of Miguel Sánchez. Founder of Smart Work Master, AI Strategist, and TEDx Speaker.">
+
+  <meta property="og:site_name" content="Miguel Sánchez">
+  <meta property="og:title" content="Miguel Sánchez | Founder, Smart Work Master & AI Strategist">
   <meta property="og:description"
-    content="Personal website of Miguel S&aacute;nchez P&eacute;rez. IT trainer &amp; speaker. Building AI-based businesses.">
+    content="Personal website of Miguel Sánchez. Founder of Smart Work Master, AI Strategist, and TEDx Speaker.">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://miguelsanchez.com/img/miguelsanchez-opengraph.png">
+  <meta property="og:image" content="https://miguelsanchez.com/img/miguel-sanchez-opengraph.png">
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="/favicon-apple.png">
   <link rel="manifest" href="/manifest.webmanifest">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&family=Rajdhani:wght@300;400;700&display=swap');
 
+    @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+
     :root {
-      /* Colors */
       --color-bg: #0d0d0d;
       --color-container: #0f0f11;
       --color-primary: #B99C36;
@@ -34,29 +41,17 @@
       --color-shadow-light: #18181a;
       --color-text: #fff;
       --color-text-secondary: #c0c0c0;
-
-      /* Gradients */
       --gradient-primary: linear-gradient(45deg, #c0c0c0, #e8e8e8, #a0a0a0);
       --gradient-gold: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-
-      /* Shadows */
       --shadow-container: 25px 25px 50px rgba(0, 0, 0, 0.5), -25px -25px 50px rgba(30, 30, 30, 0.2);
-      --shadow-logo: 8px 8px 16px var(--color-shadow-dark), -8px -8px 16px var(--color-shadow-light);
-      --shadow-button: 6px 6px 12px var(--color-shadow-dark), -6px -6px 12px var(--color-shadow-light);
-
-      /* Transitions */
-      --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-logo: 0px 10px 10px -5px var(--color-shadow-dark), -8px -8px 16px var(--color-shadow-light);
       --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-
-      /* Spacing */
-      --spacing-xs: 0.5rem;
       --spacing-sm: 1rem;
-      --spacing-md: 2rem;
-      --spacing-lg: 3rem;
-      --spacing-xl: 3.5rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2.5rem;
+      --spacing-xl: 3rem;
     }
 
-    /* Reset & Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -78,13 +73,9 @@
         linear-gradient(rgba(40, 40, 40, 0.2) 1px, transparent 1px),
         linear-gradient(90deg, rgba(40, 40, 40, 0.2) 1px, transparent 1px);
       background-size: 100% 100%, 30px 30px, 30px 30px;
-      background-position: center;
-      background-repeat: no-repeat;
-      perspective: 1000px;
       padding: 2rem;
     }
 
-    /* Container Styles */
     .container {
       width: 100%;
       margin: 0 auto;
@@ -95,14 +86,12 @@
       justify-content: center;
       min-height: calc(100vh - 4rem);
       position: relative;
-      background: var(--color-container);
+      background: #000;
       z-index: 1;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow-container);
       border: 1px solid rgba(100, 100, 100, 0.1);
-      transform-style: preserve-3d;
-      transform: translateZ(0);
     }
 
     .container::before {
@@ -115,7 +104,6 @@
       pointer-events: none;
       z-index: -1;
       opacity: 0.9;
-      filter: blur(3px);
     }
 
     .container::after {
@@ -130,7 +118,6 @@
       z-index: 1;
     }
 
-    /* Grid Floor */
     .grid-floor {
       position: absolute;
       bottom: 0;
@@ -149,25 +136,20 @@
       z-index: -1;
     }
 
-    /* Logo Styles */
-    .logo {
+    .profile-photo {
       width: 140px;
       height: 140px;
-      border-radius: 50%;
+      border-radius: 10%;
       background: var(--color-container);
-      box-shadow: var(--shadow-logo);
-      transition: var(--transition-slow);
       position: relative;
       z-index: 2;
-      transform-style: preserve-3d;
-      border: 1px solid rgba(185, 156, 54, 0.3);
+      border: 1px solid var(--color-shadow-light);
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* Style the image itself */
-    .logo-img {
+    .profile-photo-img {
       display: block;
       width: 100%;
       height: 100%;
@@ -175,68 +157,6 @@
       border-radius: inherit;
     }
 
-    /* First rotating effect - outer glow */
-    .logo::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: -8px;
-      right: -8px;
-      bottom: -8px;
-      border-radius: 50%;
-      background: linear-gradient(45deg,
-          transparent,
-          rgba(185, 156, 54, 0.1),
-          rgba(240, 214, 122, 0.8),
-          rgba(185, 156, 54, 0.1),
-          transparent);
-      z-index: -1;
-      animation: rotate-1 8s linear infinite;
-      filter: blur(8px);
-    }
-
-    /* Second rotating effect - inner glow, different direction & speed */
-    .logo::after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      right: -4px;
-      bottom: -4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg,
-          transparent,
-          rgba(185, 156, 54, 0.1),
-          rgba(240, 214, 122, 0.6),
-          rgba(185, 156, 54, 0.1),
-          transparent);
-      z-index: -1;
-      animation: rotate-2 12s linear infinite;
-      filter: blur(5px);
-    }
-
-    /* Direct rotation animations */
-    @keyframes rotate-1 {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes rotate-2 {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(-360deg);
-      }
-    }
-
-    /* Typography */
     h1 {
       font-family: 'Rajdhani', sans-serif;
       background: var(--gradient-primary);
@@ -255,7 +175,7 @@
 
     h2 {
       font-family: 'Titillium Web', sans-serif;
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       font-weight: 300;
       color: var(--color-primary);
       text-align: center;
@@ -265,14 +185,15 @@
       position: relative;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      line-height: 1.4;
     }
 
-    /* Navigation */
     ul {
       list-style: none;
       display: flex;
-      gap: var(--spacing-lg);
-      margin-top: var(--spacing-md);
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
       justify-content: center;
       position: relative;
       z-index: 5;
@@ -291,7 +212,6 @@
       position: relative;
       text-transform: uppercase;
       font-weight: 300;
-      overflow: hidden;
     }
 
     a:hover {
@@ -299,81 +219,55 @@
       border-color: rgba(185, 156, 54, 0.7);
       background: rgba(185, 156, 54, 0.15);
       transform: scale(1.03);
-      box-shadow:
-        0 0 15px 3px rgba(185, 156, 54, 0.4),
-        inset 0 0 10px 2px rgba(185, 156, 54, 0.2);
+      box-shadow: 0 0 15px 3px rgba(185, 156, 54, 0.4), inset 0 0 10px 2px rgba(185, 156, 54, 0.2);
       text-shadow: 0 0 5px rgba(240, 214, 122, 0.5);
     }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .container {
-        border-radius: 20px;
-        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5), -20px -20px 40px rgba(30, 30, 30, 0.2);
-        padding: 2.5rem;
+    .button-primary {
+      color: var(--color-primary-light);
+      border-color: rgba(185, 156, 54, 0.7);
+      background: rgba(185, 156, 54, 0.15);
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .glow-effect {
+      background: var(--color-container);
+      border-color: transparent;
+    }
+
+    .glow-effect:hover {
+      background: var(--color-primary);
+      border-color: transparent;
+      color: var(--color-container);
+    }
+
+    .glow-effect::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 100px;
+      z-index: -1;
+      background: conic-gradient(from var(--gradient-angle),
+          transparent 20%,
+          var(--color-primary-light),
+          transparent 40%);
+      animation: rotate-gleam 4s linear infinite;
+      filter: blur(1px);
+      opacity: 0.8;
+    }
+
+    @keyframes rotate-gleam {
+      0% {
+        --gradient-angle: 0deg;
       }
 
-      .grid-floor {
-        height: 20%;
-        background-size: 15px 15px;
-      }
-
-      h1 {
-        font-size: 2.8rem;
-        letter-spacing: 5px;
-        margin: 2.5rem 0 var(--spacing-sm) 0;
-        text-shadow: 0 0 8px rgba(180, 180, 180, 0.5);
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        letter-spacing: 3px;
-        margin: 0 0 3rem 0;
-      }
-
-      .logo-container {
-        margin-bottom: var(--spacing-md);
-        perspective: 800px;
-      }
-
-      .logo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-      }
-
-      ul {
-        gap: var(--spacing-md);
-        margin-top: var(--spacing-sm);
-      }
-
-      a {
-        padding: 0.7rem 1.8rem;
-        font-size: 0.9rem;
-        letter-spacing: 1.5px;
+      100% {
+        --gradient-angle: 360deg;
       }
     }
 
-    /* Media Query for very narrow screens */
-    @media (max-width: 420px) {
-      ul {
-        gap: var(--spacing-sm);
-        /* Reduce gap between buttons */
-      }
-
-      a {
-        padding: 0.5rem 0.8rem;
-        /* Further reduce horizontal padding */
-        font-size: 0.8rem;
-        /* Slightly smaller font if needed */
-        letter-spacing: 0.8px;
-        /* Further reduce letter spacing */
-        white-space: nowrap;
-        /* Prevent text wrapping */
-      }
-    }
-
-    /* Footer Styles */
     footer {
       margin-top: auto;
       padding-top: var(--spacing-xl);
@@ -384,21 +278,91 @@
       letter-spacing: 0.5px;
       text-align: center;
     }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2.5rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        letter-spacing: 5px;
+        margin: 2.5rem 0 var(--spacing-sm) 0;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin: 0 0 2.5rem 0;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        /* SOLUCIÓN DEFINITIVA: Se usa un gap generoso y consistente para tablets */
+        gap: var(--spacing-lg);
+      }
+
+      a {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        min-height: calc(100vh - 2rem);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+      }
+
+      a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        white-space: nowrap;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <div class="grid-floor"></div>
-    <div class="logo">
-      <img src="img/logo-miguelsanchez.jpg" alt="Miguel S&aacute;nchez logo" class="logo-img" />
+
+    <div class="profile-photo">
+      <img src="img/miguelsanchez-profile.jpg" alt="Photo of Miguel Sánchez" class="profile-photo-img" />
     </div>
-    <h1>IT Trainer &amp; Speaker</h1>
-    <h2>Miguel S&aacute;nchez</h2>
+
+    <h1>Miguel Sánchez</h1>
+
+    <h2>Founder, Smart Work Master<br>AI Strategist &amp; TEDx Speaker</h2>
+
     <ul>
-      <li><a href="mailto:contact@miguelsanchez.com">e-Mail</a></li>
+      <li><a href="https://www.smartworkmaster.com" target="_blank" class="button-primary glow-effect">Visit Smart Work
+          Master</a></li>
       <li><a href="https://linkedin.com/in/miguelsp" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:contact@miguelsanchez.com">e-Mail</a></li>
     </ul>
+
     <footer>
       Copyright © <span id="year"></span> miguelsanchez.com. All rights reserved.
     </footer>
