@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0d0d0d">
   <link rel="canonical" href="https://miguelsanchez.com">
 
-  <!-- SEO & Social Sharing: Aligned with the new strategy -->
+  <!-- SEO & Social Sharing -->
   <title>Miguel Sánchez | AI-Powered Operating Systems for Business Leaders</title>
   <meta name="description"
     content="Miguel Sánchez helps business leaders build AI-Powered Operating Systems to eliminate operational chaos and automate repetitive work.">
@@ -235,8 +235,6 @@
       z-index: 5;
     }
 
-    /* --- START: VERIFIED & FINAL BUTTON CODE BLOCK --- */
-
     .cta-nav a {
       color: rgba(185, 156, 54, 0.7);
       text-decoration: none;
@@ -268,68 +266,10 @@
       outline: none;
     }
 
-    .cta-nav .button-primary {
-      color: var(--color-primary-light);
-      border-color: rgba(185, 156, 54, 0.7);
-      background: rgba(185, 156, 54, 0.15);
-      font-weight: var(--font-weight-normal);
-      position: relative;
-      z-index: 1;
-    }
 
-    .glow-effect {
-      background: var(--color-container);
-      border-color: transparent;
-      position: relative;
-      z-index: 1;
-    }
-
-    .glow-effect:hover {
-      background: var(--color-primary);
-      border-color: transparent;
-      color: var(--color-container);
-    }
-
-    .glow-effect::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 100px;
-      z-index: -2;
-      background: conic-gradient(from var(--gradient-angle),
-          transparent 20%,
-          var(--color-primary-light),
-          transparent 40%);
-      animation: rotate-gleam 4s linear infinite;
-      filter: blur(1px);
-      opacity: 0.8;
-    }
-
-    .glow-effect::after {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      border-radius: 100px;
-      z-index: -1;
-      background: var(--color-container);
-    }
-
-    @keyframes rotate-gleam {
-      0% {
-        --gradient-angle: 0deg;
-      }
-
-      100% {
-        --gradient-angle: 360deg;
-      }
-    }
 
     /* Respect user's motion preferences */
     @media (prefers-reduced-motion: reduce) {
-      .glow-effect::before {
-        animation: none;
-      }
-
       .cta-nav a {
         transition: none;
       }
@@ -339,8 +279,6 @@
         transform: none;
       }
     }
-
-    /* --- END: VERIFIED & FINAL BUTTON CODE BLOCK --- */
 
     footer {
       margin-top: auto;
@@ -430,14 +368,11 @@
       <!-- Unmodified HTML Structure -->
       <h2>Miguel Sánchez</h2>
       <h1>Building AI-Powered Operating Systems for Business Leaders</h1>
-      <p>Founder, Smart Work Master • TEDx Speaker • Harvard CS for AI (in progress)</p>
+      <p>Harvard CS for AI (in progress) • TEDx Speaker</p>
     </header>
 
     <nav class="cta-nav" aria-label="Contact and social links">
       <ul>
-        <!-- Corrected class structure for buttons -->
-        <li><a href="https://www.smartworkmaster.com" target="_blank" rel="noopener noreferrer"
-            class="button-primary glow-effect">Visit Smart Work Master</a></li>
         <li><a href="https://linkedin.com/in/miguelsp" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="mailto:contact@miguelsanchez.com">e-Mail</a></li>
       </ul>
